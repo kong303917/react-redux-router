@@ -9,8 +9,8 @@
 ## 安装  
 一. 克隆仓库
 ```bash
-git clone git@github.com:zjy01/react_and_redux_and_router_example.git  
-cd react_and_redux_and_router_example
+git clone https://github.com/kong303917/react-redux-router.git
+cd react-redux-router
 ```  
   
 二. 安装依赖
