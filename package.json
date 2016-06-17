@@ -1,0 +1,45 @@
+{
+  "name": "react-redux-router",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/wwwApp",
+    "views": "node ./views/react/server.js",
+    "server": "webpack --config webpack.server.config.js && webpack --config webpack.static.config.js --optimize-minimize"
+  },
+  "dependencies": {
+    "body-parser": "~1.13.2",
+    "connect-redis": "^3.0.2",
+    "cookie-parser": "~1.3.5",
+    "debug": "~2.2.0",
+    "ejs": "~2.3.3",
+    "express": "~4.13.1",
+    "express-session": "^1.13.0",
+    "isomorphic-fetch": "^2.2.1",
+    "morgan": "~1.6.1",
+    "qr-image": "^3.1.0",
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7",
+    "react-redux": "^4.4.0",
+    "react-router": "^2.0.0",
+    "react-router-redux": "^3.0.0",
+    "redux": "^3.3.1",
+    "redux-logger": "^2.5.2",
+    "redux-thunk": "^1.0.3",
+    "reselect": "^2.0.3",
+    "serve-favicon": "~2.3.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.5.2",
+    "babel-loader": "^6.2.3",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.5.2",
+    "babel-plugin-transform-react-constant-elements": "^6.5.0",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-react": "^6.5.0",
+    "gulp": "^3.9.1",
+    "gulp-uglify": "^1.5.3",
+    "react-hot-loader": "^1.3.0",
+    "webpack": "^1.12.13",
+    "webpack-dev-server": "^1.14.1"
+  }
+}

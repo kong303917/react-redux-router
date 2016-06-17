@@ -1,0 +1,60 @@
+/**
+ * Created by zjy on 16-2-19.
+ */
+import React from 'react';
+import { render } from 'react-dom'
+import { applyMiddleware, compose, combineReducers } from 'redux'
+import { Provider } from 'react-redux'
+import { Router, Route, IndexRoute, browserHistory, Redirect } from 'react-router'
+import { syncHistory, routeReducer } from 'react-router-redux'
+import createStore from './store/configureStore'
+
+import App from './containers/app.jsx' //ui视图
+import Home from './containers/home.jsx' //ui视图
+import Login from './containers/login.jsx' //ui视图
+import Qr from './containers/qr.jsx' //ui视图
+//import * as reducers from './reducers'
+import * as reducers from './reducers'
+
+
+//auth
+import { loginRequireAuth } from './auth/loginAuth';
+
+console.log(reducers);
+
+return false;
+//reducer 和 router结合
+const reducer = combineReducers({
+    ...reducers,
+    routing: routeReducer
+});
+
+//redux 和 react-router结合的中间件
+const middleware = syncHistory(browserHistory)
+
+const finalCreateStore = compose(
+    applyMiddleware(middleware)
+)(createStore);
+
+//创建store,里面存有state树
+const store = finalCreateStore(reducer);
+
+middleware.listenForReplays(store)
+
+
+const rootElement = document.getElementById('root');
+
+render(
+    <Provider store={store}>
+        <div>
+            <Router history={browserHistory}>
+                <Route path="/" component={App}>
+                    <IndexRoute component={Home} />
+                    <Route path="/login" component={Login} onEnter={loginRequireAuth} />
+                    <Route path="/qr" component={Qr} onEnter={!loginRequireAuth} />
+                </Route>
+            </Router>
+        </div>
+    </Provider>,
+    rootElement
+);

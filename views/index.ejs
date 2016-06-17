@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="/public/css/global/normalize.css" type="text/css" rel="stylesheet">
+    <link href="/public/css/global/typography.css" type="text/css" rel="stylesheet">
+    <link href="/public/css/global/buttons.css" type="text/css" rel="stylesheet">
+    <link href="/public/css/global/grid.css" type="text/css" rel="stylesheet">
+    <link href="/public/css/css.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div id="root">
+    <div>
+        <%- __html__ %>
+    </div>
+</div>
+<script>
+    window.__INITIAL_STATE__ = <%- __state__ %>;
+</script>
+<script type="text/javascript" src="/public/bundle.js"></script>
+</body>
+</html>
