@@ -1,4 +1,4 @@
-# react_and_redux_and_router_example
+# react-redux-router
 
 ## 说明  
 本仓库保存的是 react + redux + react-router + 服务端渲染 的案例,
