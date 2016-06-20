@@ -21,7 +21,7 @@ class App extends React.Component {
 
     render() {
         //const { dispatch } = this.props;
-        //Auth.test();
+
         return (
             <div>
                 <Header {...this.props}/>
