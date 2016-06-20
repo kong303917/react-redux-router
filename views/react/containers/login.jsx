@@ -11,7 +11,6 @@ import Login from '../components/login.jsx'
 class loginContainer extends React.Component {
     componentWillUpdate(nextProps, nextState) {
         //console.log(nextProps);
-        //console.log(history);
         if(nextProps.isLogin){
             history.replace({
                 pathname: '/'
