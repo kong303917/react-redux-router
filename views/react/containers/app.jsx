@@ -21,7 +21,6 @@ class App extends React.Component {
 
     render() {
         //const { dispatch } = this.props;
-        //console.log(this);
         //Auth.test();
         return (
             <div>
